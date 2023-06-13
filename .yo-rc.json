@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.2",
+    "libraryName": "doc-rows",
+    "libraryId": "1b387d44-41fc-4b7f-a9a1-92a166b129fe",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "DocRows",
+    "solutionShortDescription": "DocRows description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

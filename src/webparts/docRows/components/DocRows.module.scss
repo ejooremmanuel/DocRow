@@ -1,0 +1,171 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.docRow {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); 
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); 
+    }
+  }
+}
+.column {
+  flex: 1;
+  padding: 20px;
+ 
+}
+.docRowContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  background-color: #ececec;
+  padding-left: 45px;
+  padding-right: 45px;
+
+}
+
+.searchInput {
+  flex-grow: 1;
+  margin-right: 10px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 140px;
+}
+
+.uploadIcon {
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  width: 30px;
+
+}
+
+.columnOne {
+  width: 30%;
+  max-width: 100%;  
+height: auto;
+  
+}
+
+.columnTwo {
+  width: 30%;
+  max-width: 100%;  
+height: auto;
+  
+}
+
+.columnThree {
+  width: 50%;
+  height: auto;
+  background-color: #ffcc00;
+  margin: 20px 20px 40px 20px;
+  
+}
+
+.headerText{
+
+  font-size: 28px;
+  text-align: left;
+
+
+}
+
+.topDoc{
+  display: flex;
+  flex-basis: 100px;
+  flex-direction: row;
+}
+
+
+
+  .downloadIcon {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #111111;
+  }
+
+  .documentLink {
+    color: #111111;
+    text-decoration: none;
+    padding: 5px;
+  }
+
+
+  
+.docCol{
+
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  
+  list-style-image: url("../assets/doc.png");
+}
+
+ul{
+
+  padding-left: 20px;
+}
+
+p{
+  font-weight: 500;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+.container{
+
+  padding-left: 20px;
+}
+
+
+
+.overlay {
+ // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlayText {
+  color: #fc0;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  z-index: 1;
+}
