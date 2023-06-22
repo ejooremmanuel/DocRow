@@ -149,11 +149,16 @@ p {
 .imageCard {
   position: relative;
 }
-.imageCard > img {
+.imageCard > a > img {
   object-fit: contain;
 }
 
-
-@media screen  {
-
+@media (max-width: 900px) {
+  .docRowContainer {
+    grid-template-columns: 1fr;
+  }
+  .imageCard > a > img {
+    object-fit: cover;
+    width: 100%;
+  }
 }

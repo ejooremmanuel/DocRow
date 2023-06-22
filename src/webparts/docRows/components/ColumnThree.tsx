@@ -92,9 +92,6 @@ export default class ColumnThree extends React.Component<
           const response = await sp.web
             .getFolderByServerRelativeUrl("Documents")
             .files.add(file.name, file, false);
-          // const response = await sp.web
-          //   .getFolderByServerRelativeUrl("Documents")
-          //   .files.add(file.name, file, false);
 
           await response.file.listItemAllFields.get();
 
@@ -152,25 +149,27 @@ export default class ColumnThree extends React.Component<
             className={styles.uploadIcon}
           />
         </div>
-        <p>Recent Documents</p>
-        <div className={styles.container}>
-          <ul>
-            {filteredDocuments.map((document: IDocument) => (
-              <li key={document.id}>
-                <a
-                  href={document.fileRef}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.documentLink}
-                >
-                  {document.title}
-                </a>
-                <a href={document.fileRef} className={styles.downloadIcon}>
-                  <Icon iconName="Downloadx" />
-                </a>
-              </li>
-            ))}
-          </ul>
+        <div style={{ padding: "1.5rem" }}>
+          <p>Recent Documents</p>
+          <div className={styles.container}>
+            <ul>
+              {filteredDocuments.map((document: IDocument) => (
+                <li key={document.id}>
+                  <a
+                    href={document.fileRef}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.documentLink}
+                  >
+                    {document.title}
+                  </a>
+                  <a href={document.fileRef} className={styles.downloadIcon}>
+                    <Icon iconName="Downloadx" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     );
