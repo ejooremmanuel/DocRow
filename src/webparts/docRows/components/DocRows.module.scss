@@ -86,6 +86,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  justify-content: space-between;
 }
 
 li {
@@ -108,7 +109,7 @@ li {
 }
 
 li {
-  list-style-image: url("../assets/doc.png");
+  list-style: none;
 }
 
 p {

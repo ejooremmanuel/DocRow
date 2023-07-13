@@ -147,7 +147,7 @@ export default class ColumnThree extends React.Component<
           </div>
         </div>
         <div style={{ marginTop: "1rem" }}>
-          <p>Recent Documents</p>
+          <p style={{ fontSize: "16px" }}>Recent Documents</p>
           <ul>
             {filteredDocuments.map((document: IDocument) => (
               <li
@@ -163,7 +163,18 @@ export default class ColumnThree extends React.Component<
                 <div
                   style={{ display: "flex", alignItems: "center", gap: "1rem" }}
                 >
-                  <Icon iconName="TextDocument" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="24"
+                    viewBox="0 0 25 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.54973 4V22H20.6702V24H4.54973C3.44145 24 2.53467 23.1 2.53467 22V4H4.54973ZM15.6326 7H21.174L15.6326 1.5V7ZM8.57985 0H16.6401L22.6853 6V18C22.6853 19.11 21.7886 20 20.6702 20H8.57985C8.04542 20 7.53288 19.7893 7.15499 19.4142C6.77709 19.0391 6.56479 18.5304 6.56479 18V2C6.56479 0.89 7.46149 0 8.57985 0ZM17.6476 16V14H8.57985V16H17.6476ZM20.6702 12V10H8.57985V12H20.6702Z"
+                      fill="black"
+                    />
+                  </svg>
                   <a
                     href={document.fileRef}
                     target="_blank"
@@ -179,7 +190,18 @@ export default class ColumnThree extends React.Component<
                   className={styles.downloadIcon}
                   download={document.title}
                 >
-                  <Icon iconName="DownloadDocument" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="17"
+                    viewBox="0 0 15 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.2919 6H10.2618V0H4.21664V6H0.186523L7.23923 13L14.2919 6ZM0.186523 15V17H14.2919V15H0.186523Z"
+                      fill="black"
+                    />
+                  </svg>
                 </a>
               </li>
             ))}
