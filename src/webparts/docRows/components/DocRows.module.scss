@@ -35,6 +35,7 @@
 .column {
   flex: 1;
   padding: 20px;
+  box-sizing: border-box;
 }
 .docRowContainer {
   display: grid;
@@ -48,13 +49,9 @@
 }
 
 .searchInput {
-  flex-grow: 1;
-  margin-right: 10px;
   border: none;
   border-radius: 20px;
   display: flex;
-  justify-content: flex-start;
-  width: 140px;
 }
 
 .uploadIcon {
@@ -77,22 +74,25 @@
   height: auto;
   background-color: #ffcc00;
   box-sizing: border-box;
-  padding: 0.5rem;
+  padding: 2rem 1rem;
 }
 
 .headerText {
   font-size: 28px;
-  text-align: left;
+  margin-bottom: 1rem;
 }
 
 .topDoc {
   display: flex;
-  flex-basis: 100px;
-  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+li {
+  margin-top: 1rem;
 }
 
 .downloadIcon {
-  margin-left: 5px;
   font-size: 16px;
   color: #111111;
 }
@@ -100,7 +100,6 @@
 .documentLink {
   color: #111111;
   text-decoration: none;
-  padding: 5px;
 }
 
 .docCol {
@@ -112,18 +111,8 @@ li {
   list-style-image: url("../assets/doc.png");
 }
 
-ul {
-  padding-left: 20px;
-}
-
 p {
   font-weight: 500;
-  padding-left: 20px;
-  padding-bottom: 20px;
-}
-
-.container {
-  padding-left: 20px;
 }
 
 .overlay {

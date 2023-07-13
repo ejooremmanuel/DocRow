@@ -135,41 +135,55 @@ export default class ColumnThree extends React.Component<
         <h2 className={styles.headerText}>Important Documents</h2>
         <div className={styles.topDoc}>
           <SearchBox
-            placeholder="Search documents..."
+            placeholder="Search..."
             value={searchText}
             onChange={(event) => {
               this.handleSearch(event);
             }}
             className={styles.searchInput}
           />
-          <Icon
-            iconName="Upload"
-            title="Upload"
-            onClick={this.handleUploadClick}
-            className={styles.uploadIcon}
-          />
+          <div onClick={this.handleUploadClick} style={{ fontWeight: "bold" }}>
+            Upload
+          </div>
         </div>
-        <div style={{ padding: "1.5rem" }}>
+        <div style={{ marginTop: "1rem" }}>
           <p>Recent Documents</p>
-          <div className={styles.container}>
-            <ul>
-              {filteredDocuments.map((document: IDocument) => (
-                <li key={document.id}>
+          <ul>
+            {filteredDocuments.map((document: IDocument) => (
+              <li
+                key={document.id}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                  width: "100%",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "1rem" }}
+                >
+                  <Icon iconName="TextDocument" />
                   <a
                     href={document.fileRef}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.documentLink}
                   >
-                    {document.title}
+                    {document.title.split(".")[0]}
                   </a>
-                  <a href={document.fileRef} className={styles.downloadIcon}>
-                    <Icon iconName="Downloadx" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+                </div>
+
+                <a
+                  href={document.fileRef}
+                  className={styles.downloadIcon}
+                  download={document.title}
+                >
+                  <Icon iconName="DownloadDocument" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     );
