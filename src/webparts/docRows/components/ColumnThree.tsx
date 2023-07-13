@@ -142,7 +142,10 @@ export default class ColumnThree extends React.Component<
             }}
             className={styles.searchInput}
           />
-          <div onClick={this.handleUploadClick} style={{ fontWeight: "bold" }}>
+          <div
+            onClick={this.handleUploadClick}
+            style={{ fontWeight: "bold", cursor: "pointer" }}
+          >
             Upload
           </div>
         </div>
